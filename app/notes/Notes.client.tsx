@@ -11,7 +11,7 @@ import { useDebouncedCallback } from 'use-debounce';
 import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
 import Loader from '@/components/Loader/Loader';
 import NoteForm from '@/components/NoteForm/NoteForm';
-import { fetchNotes } from '@/lib/api/api';
+import { fetchNotes } from '@/lib/api';
 import NoNotesMessage from '@/components/NoNotesMessage/NoNotesMessage';
 import { keepPreviousData } from '@tanstack/react-query';
 
