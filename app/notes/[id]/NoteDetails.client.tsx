@@ -18,7 +18,7 @@ export default function NoteDetails() {
 
 
 if (isLoading || isFetching) return <Loader />;
-  if ((isError) || !data) return <ErrorMessage pageError={error} />;
+  if ((isError) || !data) return <ErrorMessage error={error} />;
     
     return (
 <div className={css.container}>

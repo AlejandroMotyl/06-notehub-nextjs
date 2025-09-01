@@ -7,7 +7,7 @@ type NoteDetailsProps = {
 };
 
 
-export default async function NoteDetails({params}:NoteDetailsProps) {
+export default async function NoteDetails({ params }: NoteDetailsProps) {
     const queryClient = new QueryClient();
     const { id } =  await params;
     
