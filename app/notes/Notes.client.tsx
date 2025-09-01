@@ -32,7 +32,7 @@ const { isLoading, isError, isFetching, data } = useQuery({
 
   
   const notes = (data && data.notes) ? data.notes : [];  
-  const totalPages = (data && data.notes) ? data.totalPages : 0;  
+  const totalPages = (data && data.notes) ? data.totalPages : 1;  
 
 
   const openModal = () => setModalState(true);
@@ -58,7 +58,7 @@ const { isLoading, isError, isFetching, data } = useQuery({
         : (isError ) ? (<ErrorMessage />)
         : (notes.length === 0) ? (<NoNotesMessage />)
         : (<>
-          {notes.length > 1 && <Pagination totalPages={totalPages} page={page} setPage={setPage} />} 
+          {totalPages > 1 && <Pagination totalPages={totalPages} page={page} setPage={setPage} />} 
           <NoteList notes={notes} />
           </>)
           }

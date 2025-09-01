@@ -1,8 +1,11 @@
 'use client';
 import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
+interface ErrorProps {
+  error: Error;
+}
 
-export default function Error(error:Error) {
+export default function Error({error}:ErrorProps) {
   return (
-    <ErrorMessage pageError={error} />
+    <ErrorMessage error={error} />
   );
 }

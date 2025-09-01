@@ -1,12 +1,12 @@
 import css from "./ErrorMessage.module.css"
 interface ErorrMessageProps{
-    pageError?: Error | null
+    error?: Error | null
 }
 
-export default function ErrorMessage({pageError}:ErorrMessageProps) {
+export default function ErrorMessage({error}:ErorrMessageProps) {
     return (
 <p className={css.text}>
-  There was an error {pageError?.message && `(${pageError.message})`}, please try again...
+  There was an error {error?.message && `(${error.message})`}, please try again...
 </p>
 
     )
